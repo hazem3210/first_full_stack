@@ -1,0 +1,112 @@
+.create{
+	color: white;
+	background: rgb(89, 156, 255);
+	width: 15%;
+	padding: 1.2em;
+	display: inline-block;
+	font-size: 12px;
+	border: none;
+	cursor: pointer;
+}
+
+a{
+	text-decoration:none !important;
+}
+ 
+.table{
+	width: 100%;
+	border: black 1px solid !important;
+	border-collapse: collapse !important;
+}
+
+.table td{
+	text-align: center;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+
+.table thead{
+	background: black;
+	color: white;
+	text-align: center;
+}	
+
+.table th,.table td{
+	padding: .5rem;
+	border: black 1px solid;
+}
+
+.table tfoot td{
+	padding: .7em;
+	background: black;
+	color: white;
+}
+
+.no_data{
+	color: rgb(255, 0, 0);
+	font-weight: 900;
+	font-size: 32px;
+	padding: 2rem 0;
+	text-align: center;
+	background: rgb(255, 203, 203);
+
+}
+
+/*create*/
+
+.label{
+	font-size: 18px;
+	font-weight: 900;
+	margin: 5px;
+}
+
+.input{
+	border-radius: 3px;
+	height: 1.5rem;
+	width: 25%;
+	border: 1px solid;
+}
+
+.invaild{
+	border: 2px solid rgb(237, 0, 0);
+	outline: none;
+}
+
+.empty{
+	color: red;
+}
+
+.area:focus{
+	border: 2px solid rgb(139, 185, 255);
+	outline: none;
+
+}
+
+.input:focus{
+	border: solid 2px ;
+	border-color: rgb(139, 185, 255);
+	outline: none;
+}
+
+.submit , .danger{
+
+	color: white;
+	border: none;
+	padding: 1em 1.5em;
+	text-align: center;
+	border-radius: 6px;
+	font-weight: 600;
+	font-size: 14px;
+	display: inline-block;
+	margin: 2vh 0;
+	cursor: pointer;
+}
+
+.submit{
+	background: darkgreen;
+}
+
+.danger{
+	background: rgb(204, 0, 0);
+}

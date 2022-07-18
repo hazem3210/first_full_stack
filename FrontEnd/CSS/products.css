@@ -1,0 +1,41 @@
+.create{
+	color: white;
+	background: rgb(89, 156, 255);
+	width: 15%;
+	padding: 1.2em;
+	display: inline-block;
+	font-size: 12px;
+	border: none;
+	cursor: pointer;
+}
+a{
+	text-decoration:none !important;
+}
+ 
+.table{
+	width: 100%;
+	border: black 1px solid !important;
+	border-collapse: collapse !important;
+}
+
+.table thead{
+	background: black;
+	color: white;
+	text-align: center;
+}	
+
+.table td{
+	text-align: center;
+	font-size: 10px;
+}
+
+.table th,.table td{
+	padding: .5em;
+	border: black 1px solid;
+}
+
+.table tfoot td{
+	padding: .7em;
+	background: black;
+	color: white;
+}
