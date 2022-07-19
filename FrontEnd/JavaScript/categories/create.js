@@ -26,7 +26,7 @@ $(document).ready(function(){
         return true;
     }
 
-    function submit(){
+    function validate(){
         if(check())
         {
             var cat={
@@ -41,22 +41,19 @@ $(document).ready(function(){
 
                 if(this.readyState == 4 && this.status >= 200 && this.status < 300 )
                 {
-                console.log("great");
+                location.assign("index.html");                
                 return true;
                 }
                 else if(this.readyState == 4 && this.status >= 400 && this.status < 500 || this==null || this==undefined )
                 {
-                    console.log(post);
                     return false;
                 }
             }
             xhttp.onerror=function(){
-                console.log("bad2");
                 return false;
 
            }
            xhttp.ontimeout=function(){
-            console.log("bad3");
             return false;
 
            }
@@ -66,4 +63,6 @@ $(document).ready(function(){
             xhttp.send(post);
             
         }
+        return false;
+
     }

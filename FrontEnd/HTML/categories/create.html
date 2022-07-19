@@ -15,7 +15,7 @@
 <div class="body">
 	<h2>Create</h2>
 	<hr />
-	<form  onsubmit="return submit()" id="my_form">
+	<form onsubmit="return validate();" id="my_form">
 		<p class="label">Name</p>
 		<input name="name" class="input" />
 		<span></span>
@@ -23,7 +23,7 @@
 		<textarea cols="50" rows="10" name="desc" class="area" ></textarea>
 		<br/>
 		<input type="submit" class="submit" value="Submit" />
-		<input type="reset" class="danger" value="Reset">
+		<a href="index.html" class="danger">Cancel</a>
 	</form>
 </div>
 </body>
