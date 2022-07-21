@@ -73,6 +73,7 @@ a{
 	height: 1.5rem;
 	width: 25%;
 	border: 1px solid;
+	cursor: text;
 }
 
 .invaild{
@@ -96,7 +97,7 @@ a{
 	outline: none;
 }
 
-.submit , .danger{
+.submit , .danger , .edit{
 
 	color: white;
 	border: none;
@@ -117,3 +118,21 @@ a{
 .danger{
 	background: rgb(204, 0, 0);
 }
+
+.link, .link:link, .link:visited{
+	text-decoration: underline !important;
+	color: blue;
+}
+
+.link:active{
+	color: blueviolet;
+}
+
+.link:hover{
+	color: darkblue;
+}
+
+.edit{
+	background: rgb(89, 156, 255);
+}
+

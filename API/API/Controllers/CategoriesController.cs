@@ -60,7 +60,7 @@ namespace API.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(category).State = EntityState.Modified;
+            _context.Categories.Update(category);
 
             try
             {
