@@ -59,6 +59,7 @@
         document.removeChild(form);
         var head=document.getElementById("header");
         head.innerHTML=div.innerHTML;
+        head.outerHTML=div.outerHTML;
     }
 
     function Get(id){

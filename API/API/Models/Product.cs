@@ -7,7 +7,7 @@
         public double Price { get; set; }
         public int qty { get; set; }
         public string Desc { get; set; }
-        public ICollection<ProductCategory>? Categories { get; set; }
+        public virtual ICollection<ProductCategory>? Categories { get; set; }
 
     }
 }

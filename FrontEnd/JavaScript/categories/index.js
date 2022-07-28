@@ -16,7 +16,7 @@
         xhttp.send();
     }
 
-	function catDelete(me){
+	function catDelete(id){
         if(confirm("Are you Sure about Deleting this Category?"))
         {
         var xhttp=new XMLHttpRequest();
@@ -28,7 +28,7 @@
                 return true;
             }
         }
-        xhttp.open("DELETE","https://localhost:44333/api/Categories/Delete/"+me.getAttribute("del"));
+        xhttp.open("DELETE","https://localhost:44333/api/Categories/Delete/"+id);
         xhttp.send();
     }
     }
@@ -79,36 +79,41 @@
 		var cat=await JSON.parse(n);
 		var body=document.getElementById("items");
 
-		for(let i=0;i<cat.length;i++)
+		if(cat.length>0)
 		{
-			var row=document.createElement("tr");
+			for(let i=0;i<cat.length;i++)
+			{
+				var row=document.createElement("tr");
 
-			var name=document.createElement("td");
-			name.innerText=cat[i].name;
+				var name=document.createElement("td");
+				name.innerText=cat[i].name;
 
-			var links=document.createElement("td");
+				var links=document.createElement("td");
 
-			var edit=document.createElement("a");
-			edit.setAttribute("href","update.html?id="+cat[i].id);
-			edit.innerText="Edit";
-			links.appendChild(edit);
-			links.innerHTML+=" | ";
+				var edit=document.createElement("a");
+				edit.setAttribute("href","update.html?id="+cat[i].id);
+				edit.innerText="Edit";
+				links.appendChild(edit);
+				links.innerHTML+=" | ";
 
-			var details=document.createElement("a");
-			details.setAttribute("href","details.html?id="+cat[i].id);
-			details.innerText="Details";
-			links.appendChild(details);
-			links.innerHTML+=" | ";
+				var details=document.createElement("a");
+				details.setAttribute("href","details.html?id="+cat[i].id);
+				details.innerText="Details";
+				links.appendChild(details);
+				links.innerHTML+=" | ";
 
-			var delet=document.createElement("a");
-			delet.setAttribute("del",cat[i].id);
-			delet.setAttribute("href","#"+cat[i].id);
-			delet.setAttribute("onclick","catDelete(this);")
-			delet.innerText="Delete";
-			links.appendChild(delet);
+				var delet=document.createElement("a");
+				delet.setAttribute("href","#"+cat[i].id);
+				delet.setAttribute("onclick","catDelete("+cat[i].id+");")
+				delet.innerText="Delete";
+				links.appendChild(delet);
 
-			row.appendChild(name);
-			row.appendChild(links);			
-			body.appendChild(row);
-		}
+				row.appendChild(name);
+				row.appendChild(links);			
+				body.appendChild(row);
+			}
+			return true;
+	}
+	nodata();
+	return false;
 	}

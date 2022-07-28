@@ -26,7 +26,7 @@ a{
 
 .table td{
 	text-align: center;
-	font-size: 10px;
+	font-size: 15px;
 }
 
 .table th,.table td{
@@ -39,3 +39,90 @@ a{
 	background: black;
 	color: white;
 }
+
+.no_data{
+	color: rgb(255, 0, 0);
+	font-weight: 900;
+	font-size: 32px;
+	padding: 2rem 0;
+	text-align: center;
+	background: rgb(255, 203, 203);
+
+}
+
+/*create*/
+
+.label{
+	font-size: 18px;
+	font-weight: 900;
+	margin: 5px;
+}
+
+.input{
+	border-radius: 3px;
+	height: 1.5rem;
+	width: 25%;
+	border: 1px solid;
+	cursor: text;
+}
+
+.invaild{
+	border: 2px solid rgb(237, 0, 0);
+	outline: none;
+}
+
+.empty{
+	color: red;
+}
+
+.area:focus{
+	border: 2px solid rgb(139, 185, 255);
+	outline: none;
+
+}
+
+.input:focus{
+	border: solid 2px ;
+	border-color: rgb(139, 185, 255);
+	outline: none;
+}
+
+.submit , .danger , .edit{
+
+	color: white;
+	border: none;
+	padding: 1em 1.5em;
+	text-align: center;
+	border-radius: 6px;
+	font-weight: 600;
+	font-size: 14px;
+	display: inline-block;
+	margin: 2vh 0;
+	cursor: pointer;
+}
+
+.submit{
+	background: darkgreen;
+}
+
+.danger{
+	background: rgb(204, 0, 0);
+}
+
+.link, .link:link, .link:visited{
+	text-decoration: underline !important;
+	color: blue;
+}
+
+.link:active{
+	color: blueviolet;
+}
+
+.link:hover{
+	color: darkblue;
+}
+
+.edit{
+	background: rgb(89, 156, 255);
+}
+

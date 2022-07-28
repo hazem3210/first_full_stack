@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Proudcts</title>
+		<script type="text/javascript" src="../../JavaScript/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../Css/shared.css">
+	<link rel="stylesheet" type="text/css" href="../../Css/products.css">
+	<script type="text/javascript" src="../../JavaScript/products/update.js"></script>
+</head>
+<body>
+<div id="nav">
+</div>
+<div class="body">
+	<div id="header">
+		<h2>Edit</h2>
+		<hr />
+	</div>
+	<form onsubmit="return validate();" id="my_form">
+		<input hidden type="number" name="id"/>
+		<p class="label">Name</p>
+		<input name="name" class="input" />
+		<span></span>
+		<p class="label">Price</p>
+		<input name="price" type="number" class="input" />
+		<span></span>
+		<p class="label">Quntaty</p>
+		<input name="qty" type="number" class="input" />
+		<span></span>
+		<p class="label">Categories</p>
+		<select name="categories" multiple class="select" onchange="addArray();"></select>
+		<span></span>
+		<p class="label">Descraption</p>
+		<textarea cols="50" rows="10" name="desc" class="area" ></textarea>
+		<br/>
+		<input type="submit" class="submit" value="Submit" />
+		<a onclick="ProdDelete();" class="danger">Delete</a>
+	</form>
+	<a class="link" href="index.html">Return to Categories</a>
+</div>
+</body>
+</html>
